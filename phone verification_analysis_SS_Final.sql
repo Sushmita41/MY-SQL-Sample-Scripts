@@ -167,7 +167,7 @@ where t.user_name in
             (select distinct t2.user_name
             from dwh.fct_web_tracking t2
             where t2.created_datetime>= '2022-12-31 00:00:00'  
-            and t2.user_name not like '%moneykey.com' -- and t.user_id in (4052602,4051939,4052710, 4053956,4051529)
+             -- and t.user_id in (4052602,4051939,4052710, 4053956,4051529)
             group by t2.user_name, t2.page)
             
 group by t.user_id 
